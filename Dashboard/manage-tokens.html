@@ -545,7 +545,7 @@ contract_instance.getTokenList(function(error, result){
 
                     var arrayProviders = result;
 
-                    document.getElementById("myTokens").innerHTML =  arrayProviders.map(function(value, index) { return "<br />Token No: " + index + "</br>" + " Address: " + value + "</br>"});
+                    document.getElementById("myTokens").innerHTML =  arrayProviders.map(function(value, index) { return "<tr><td> " + index + "</td><td>" + value + "</td></tr>"});
                 }
             else
                 console.error(error);
@@ -619,7 +619,7 @@ contract_instance.symbol(function(error, result){
         <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="blocal.html"><img src="logo.png"></a>
+                    <a href="blocal.html">blocal.space</a>
                 </div>
             </div>
             <div class="main-menu">
@@ -628,7 +628,7 @@ contract_instance.symbol(function(error, result){
                         <ul class="metismenu" id="menu">
                             <li><a href="blocal.html" aria-expanded="true"><i class="ti-dashboard"></i><span>Community tokens</span></a></li>
                             <li><a href="manage-tokens.html" aria-expanded="true"><i class="ti-ticket"></i><span>Manage tokens</span></a></li>
-                            <li><a href="javascript:void(0)" aria-expanded="true"><i class="ti-panel"></i><span>Manage members</span></a></li>
+                            <li><a href="javascript:void(0)" aria-expanded="true"><i class="ti-panel"></i><span>Manage groups</span></a></li>
                             <li><a href="javascript:void(0)" aria-expanded="true"><i class="ti-shine"></i><span>Distribute tokens</span></a></li>
                             <li><a href="javascript:void(0)" aria-expanded="true"><i class="ti-receipt"></i><span>Transactions</span></a></li>
 
@@ -897,11 +897,17 @@ contract_instance.symbol(function(error, result){
 
                                                 <table class="table table-hover progress-table text-center">
                                                     <thead class="text-uppercase">
+                                                      <tr>
+                                                          <th scope="col">Token No</th>
+                                                          <th scope="col" colspan=2>Token Address</th>
+
+                                                      </tr>
 
                                                     </thead>
-                                                    <output id="myBalance"></output>
-                                                    <output id="myAddress"></output>
-                                                    <output id="myTokens"></output>
+
+
+                                                    <table  class="table table-hover progress-table text-center" id="myAddress"></table>
+                                                    <table  class="table table-hover progress-table text-center" id="myTokens"></table>
                                                 </table>
 
 
