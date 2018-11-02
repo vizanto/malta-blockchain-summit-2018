@@ -791,17 +791,11 @@ if ($('#socialads').length) {
             }
         },
         series: [{
-                name: 'Closed',
-                data: [51, 48, 64, 48, 84]
-            }, {
-                name: 'Hold',
-                data: [83, 84, 53, 81, 88]
-            }, {
-                name: 'Pending',
+                name: 'Conversions',
                 data: [93, 84, 53, 53, 48]
             },
             {
-                name: 'Active',
+                name: 'Impressions',
                 data: [430, 312, 348, 254, 258]
             }
         ]
