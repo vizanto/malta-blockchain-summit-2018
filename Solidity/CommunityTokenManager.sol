@@ -1,16 +1,9 @@
 pragma solidity ^0.4.23;
 
-//import 'openzeppelin-solidity/contracts/drafts/Counter.sol';
-//import 'openzeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
-
 import 'github.com/OpenZeppelin/zeppelin-solidity/contracts/drafts/Counter.sol';
 import 'github.com/OpenZeppelin/zeppelin-solidity/contracts/token/ERC721/ERC721Full.sol';
 
 contract CommunityToken is ERC721Full {
-    //using Counter for Counter.Index;
-
-    //Counter.Index private tokenId;
-
     constructor(
         string name,
         string symbol
